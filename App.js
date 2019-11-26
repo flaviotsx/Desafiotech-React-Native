@@ -1,19 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+//import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello World é o Inferno!!</Text>
-    </View>
-  );
+  return <HomePage />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
