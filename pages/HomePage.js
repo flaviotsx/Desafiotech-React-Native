@@ -7,7 +7,7 @@ import {NavigationActions, StackActions} from 'react-navigation';
 export default class Home extends Component{
 
   static navigationOptions = {
-    header: null
+   // header: null
   }
 
   constructor(props){
@@ -98,7 +98,7 @@ export default class Home extends Component{
         placeholder="Senha" placeholderTextColor="#FFF" />
         <View style={styles.button}>
           <TouchableOpacity style={styles.textButton} onPress={this.entrar}>
-            <Text style={styles.btnText}>
+            <Text style={styles.textButton}>
               ENTRAR
             </Text>
           </TouchableOpacity>

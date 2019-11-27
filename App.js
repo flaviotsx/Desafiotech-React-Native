@@ -2,6 +2,7 @@ import React from "react";
 //import LoginPage from "./pages/LoginPage";
 import Home from "./pages/HomePage";
 import Ranking_1 from "./pages/Ranking_1";
+import Nivel1 from "./pages/Nivel1";
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -11,6 +12,9 @@ const Navegador = createStackNavigator({
   },
   Ranking_1:{
     screen: Ranking_1
+  },
+  Nivel1:{
+    screen: Nivel1
   }
 },{
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import Svg, { Ellipse } from "react-native-svg";
 
 export default function LoginPage() {
@@ -58,11 +58,7 @@ export default function LoginPage() {
       <TextInput style={styles.input} placeholder=" Número da Matrícula" />
       <TextInput style={styles.input} placeholder=" Nome Completo" />
       <View style={styles.button}>
-        <TouchableOpacity style={styles.textButton} onPress={this.entrar}>
-          <Text style={styles.btnText}>
-            ENTRARrr
-          </Text>
-        </TouchableOpacity>
+        <Text style={styles.textButton}>Entrar</Text>
       </View>
     </View>
   );

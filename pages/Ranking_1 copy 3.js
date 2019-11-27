@@ -1,75 +1,60 @@
 import React, { Component } from "react";
-import {Text, View, TouchableOpacity, TextInput, StyleSheet, Keyboard} from 'react-native';
+import { StyleSheet, View, Text } from "react-native";
 
-export default class  Ranking_1 extends Component{
-
-    constructor(props){
-        super(props);
-        
-        }
-  render() {
-        return (
-        <View style={styles.container}>
-        <Text style={styles.ranking}>Ranking</Text>
-        <View style={styles.group1}>
-            <View style={styles.rect}>
-            <View style={styles.devinRow}>
-                <Text style={styles.devin}>Devin</Text>
-                <Text style={styles.devin2}>4.9</Text>
-            </View>
-            </View>
+function Ranking_1(props) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.ranking}>Ranking</Text>
+      <View style={styles.group1}>
+        <View style={styles.rect}>
+          <View style={styles.devinRow}>
+            <Text style={styles.devin}>Devin</Text>
+            <Text style={styles.devin2}>4.9</Text>
+          </View>
         </View>
-        <View style={styles.group7}>
-            <View style={styles.rect}>
-            <View style={styles.danRow}>
-                <Text style={styles.dan}>Dan</Text>
-                <Text style={styles.devin8}>4.8</Text>
-            </View>
-            </View>
+      </View>
+      <View style={styles.group7}>
+        <View style={styles.rect}>
+          <View style={styles.danRow}>
+            <Text style={styles.dan}>Dan</Text>
+            <Text style={styles.devin8}>4.8</Text>
+          </View>
         </View>
-        <View style={styles.group3}>
-            <View style={styles.rect}>
-            <View style={styles.dominicRow}>
-                <Text style={styles.dominic}>Dominic</Text>
-                <Text style={styles.devin4}>4.5</Text>
-            </View>
-            </View>
+      </View>
+      <View style={styles.group3}>
+        <View style={styles.rect}>
+          <View style={styles.dominicRow}>
+            <Text style={styles.dominic}>Dominic</Text>
+            <Text style={styles.devin4}>4.5</Text>
+          </View>
         </View>
-        <View style={styles.group4}>
-            <View style={styles.rect}>
-            <View style={styles.jacksonRow}>
-                <Text style={styles.jackson}>Jackson</Text>
-                <Text style={styles.devin5}>4.4</Text>
-            </View>
-            </View>
+      </View>
+      <View style={styles.group4}>
+        <View style={styles.rect}>
+          <View style={styles.jacksonRow}>
+            <Text style={styles.jackson}>Jackson</Text>
+            <Text style={styles.devin5}>4.4</Text>
+          </View>
         </View>
-        <View style={styles.group5}>
-            <View style={styles.rect}>
-            <View style={styles.jamesRow}>
-                <Text style={styles.james}>James</Text>
-                <Text style={styles.devin6}>4.1</Text>
-            </View>
-            </View>
+      </View>
+      <View style={styles.group5}>
+        <View style={styles.rect}>
+          <View style={styles.jamesRow}>
+            <Text style={styles.james}>James</Text>
+            <Text style={styles.devin6}>4.1</Text>
+          </View>
         </View>
-        <View style={styles.group6}>
-            <View style={styles.rect}>
-            <View style={styles.joelRow}>
-                <Text style={styles.joel}>Joel</Text>
-                <Text style={styles.devin7}>3.7</Text>
-            </View>
-            </View>
+      </View>
+      <View style={styles.group6}>
+        <View style={styles.rect}>
+          <View style={styles.joelRow}>
+            <Text style={styles.joel}>Joel</Text>
+            <Text style={styles.devin7}>3.7</Text>
+          </View>
         </View>
-
-        <View style={styles.button}>
-            <TouchableOpacity style={styles.textButton} onPress={() => { this.props.navigation.navigate({routeName: 'Nivel1'}) }}>
-                <Text style={styles.textButton}>
-                Praticar
-                </Text>
-            </TouchableOpacity>
-            </View>
-        </View>
-    );
-    }
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -87,19 +72,6 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop: 35,
     marginLeft: 66
-  },
-  button: {
-    backgroundColor: "#429",
-    borderRadius: 4,
-    height: 40,
-    alignSelf: "stretch",
-    marginHorizontal: 50,
-    marginTop: 20
-  },
-  textButton: {
-    color: "rgba(248,231,28,1)",
-    fontSize: 26,
-    textAlign: "center"
   },
   rect: {
     width: 244,
@@ -251,3 +223,4 @@ const styles = StyleSheet.create({
   }
 });
 
+export default Ranking_1;
