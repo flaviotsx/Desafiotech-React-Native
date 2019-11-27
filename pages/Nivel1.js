@@ -1,91 +1,135 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, Text, TextInput, View, FlatList } from "react-native";
 import Svg, { Ellipse } from "react-native-svg";
 
 
-function Nivel1(props) {
+export default function Nivel1(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.ellipseStack}>
-        <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse}>
-          <Ellipse
-            strokeWidth={1}
-            fill="rgba(177,255,128,1)"
-            stroke="rgba(80,42,149,1)"
-            cx={71}
-            cy={67}
-            rx={70}
-            ry={67}
-          ></Ellipse>
-        </Svg>
-        <Text style={styles.loremIpsum}>10</Text>
+      <View style={styles.box1}>
+        <View style={styles.ellipseStack}>
+          <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse}>
+            <Ellipse
+              strokeWidth={1}
+              fill="rgba(177,255,128,1)"
+              stroke="rgba(80,42,149,1)"
+              cx={71}
+              cy={67}
+              rx={70}
+              ry={67}
+            ></Ellipse>
+          </Svg>
+          <Text style={styles.loremIpsum}>10</Text>
+        </View>
+        <Text style={styles.title}>Lógica de Programaão</Text>
       </View>
-      <Text style={styles.lo2}>Lógica de Programação</Text>
-      <View style={styles.ellipse1Row}>
-        <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse1}>
-          <Ellipse
-            strokeWidth={1}
-            fill="rgba(177,255,128,1)"
-            stroke="rgba(80,42,149,1)"
-            cx={71}
-            cy={67}
-            rx={70}
-            ry={67}
-          ></Ellipse>
-        </Svg>
-        <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse2}>
-          <Ellipse
-            strokeWidth={1}
-            fill="rgba(177,255,128,1)"
-            stroke="rgba(80,42,149,1)"
-            cx={71}
-            cy={67}
-            rx={70}
-            ry={67}
-          ></Ellipse>
-        </Svg>
-      </View>
-      <View style={styles.ellipse3Row}>
-        <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse3}>
-          <Ellipse
-            strokeWidth={1}
-            fill="rgba(177,255,128,1)"
-            stroke="rgba(80,42,149,1)"
-            cx={71}
-            cy={67}
-            rx={70}
-            ry={67}
-          ></Ellipse>
-        </Svg>
-        <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse4}>
-          <Ellipse
-            strokeWidth={1}
-            fill="rgba(177,255,128,1)"
-            stroke="rgba(80,42,149,1)"
-            cx={71}
-            cy={67}
-            rx={70}
-            ry={67}
-          ></Ellipse>
-        </Svg>
-      </View>
-      <View style={styles.group1}>
-        <View style={styles.rect2}>
-          <Text style={styles.Nivel12}>NÍVEL 2</Text>
+
+      <View style={styles.box2}>
+        <View style={styles.box3}>
+          <View style={styles.underTitle}>
+            <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse1}>
+              <Ellipse
+                strokeWidth={1}
+                fill="rgba(177,255,128,1)"
+                stroke="rgba(80,42,149,1)"
+                cx={71}
+                cy={67}
+                rx={70}
+                ry={67}
+              ></Ellipse>
+            </Svg>
+            <Text>variáveis</Text>
+          </View>
+          <View>
+            <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse1}>
+              <Ellipse
+                strokeWidth={1}
+                fill="rgba(177,255,128,1)"
+                stroke="rgba(80,42,149,1)"
+                cx={71}
+                cy={67}
+                rx={70}
+                ry={67}
+              ></Ellipse>
+            </Svg>
+            <Text>variáveis</Text>
+          </View>
+        </View>
+        <View style={styles.box3}>
+          <View>
+            <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse1}>
+              <Ellipse
+                strokeWidth={1}
+                fill="rgba(177,255,128,1)"
+                stroke="rgba(80,42,149,1)"
+                cx={71}
+                cy={67}
+                rx={70}
+                ry={67}
+              ></Ellipse>
+            </Svg>
+            <Text>variáveis</Text>
+          </View>
+          <View>
+            <Svg viewBox="0 0 141.42 134.23" style={styles.ellipse1}>
+              <Ellipse
+                strokeWidth={1}
+                fill="rgba(177,255,128,1)"
+                stroke="rgba(80,42,149,1)"
+                cx={71}
+                cy={67}
+                rx={70}
+                ry={67}
+              ></Ellipse>
+            </Svg>
+            <Text>variáveis</Text>
+          </View>
         </View>
       </View>
-      <View style={styles.group2}>
-        <View style={styles.rect2}>
-          <Text style={styles.inicio}>INICIO</Text>
+
+      <View style={styles.box4}>
+        <View style={styles.button}>
+          <Text style={styles.textButton}>Nível 2</Text>
+        </View>
+
+        <View style={styles.button}>
+          <Text style={styles.textButton}>Início</Text>
         </View>
       </View>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
-    width: 309,
-    height: 612
+    flex: 1,
+    justifyContent: "space-around"
+  },
+  box1: {
+    width: "100%",
+    height: 200,
+    flex:1,
+    paddingTop: 90,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  box2: {
+    width: "100%",
+    height: 400,
+    justifyContent: "center"
+  },
+  box3: {
+    width: "100%",
+    height: 135,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 15
+  },
+  box4: {
+    width: "100%",
+    height: 135,
+    justifyContent: "space-around",
+    marginTop: 0
   },
   ellipse: {
     top: 0,
@@ -103,72 +147,40 @@ const styles = StyleSheet.create({
   },
   ellipseStack: {
     width: 141,
-    height: 134,
-    marginLeft: 84
-  },
-  lo2: {
-    color: "#121212",
-    marginTop: 3,
-    marginLeft: 81
+    height: 134
   },
   ellipse1: {
     width: 141,
     height: 134
   },
-  ellipse2: {
-    width: 141,
-    height: 134,
-    marginLeft: 27
+  underTitle: {
+    justifyContent: "center"
   },
-  ellipse1Row: {
-    height: 134,
-    flexDirection: "row",
-    marginTop: 17
+  title: {
+    fontSize: 20
   },
-  ellipse3: {
-    width: 141,
-    height: 134
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44
   },
-  ellipse4: {
-    width: 141,
-    height: 134,
-    marginLeft: 27
+  item2: {
+    padding: 10,
+    fontSize: 18,
+    height: 44
   },
-  ellipse3Row: {
-    height: 134,
-    flexDirection: "row",
-    marginTop: 19
+  button: {
+    backgroundColor: "#429",
+    borderRadius: 4,
+    height: 40,
+    justifyContent: "center",
+    marginHorizontal: 50,
+    marginTop: 20,
+    marginBottom: 50
   },
-  group1: {
-    width: 244,
-    height: 50,
-    marginTop: 34,
-    marginLeft: 33
-  },
-  rect2: {
-    width: 244,
-    height: 50,
-    backgroundColor: "#502a95",
-    borderRadius: 4
-  },
-  Nivel12: {
-    color: "rgba(255,255,255,1)",
-    fontSize: 28,
-    marginTop: 11,
-    marginLeft: 72
-  },
-  group2: {
-    width: 244,
-    height: 50,
-    marginTop: 23,
-    marginLeft: 33
-  },
-  inicio: {
-    color: "rgba(255,255,255,1)",
-    fontSize: 28,
-    marginTop: 11,
-    marginLeft: 82
+  textButton: {
+    color: "rgba(248,231,28,1)",
+    fontSize: 26,
+    textAlign: "center"
   }
 });
-
-export default Nivel1;

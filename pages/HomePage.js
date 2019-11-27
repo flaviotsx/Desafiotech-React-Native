@@ -22,7 +22,7 @@ export default class Home extends Component{
   }
 
   entrar(){
-    if(this.state.matricula === '123456' && this.state.senha === '123'){
+    if(this.state.matricula === '123456'){
       Keyboard.dismiss();
       //this.props.navigation.navigate('Interna');
       this.props.navigation.dispatch(StackActions.reset({
@@ -33,69 +33,67 @@ export default class Home extends Component{
       }))
 
     }else{
-      alert('Erro na autenticacao');
+      alert('Aluno não encontrado!');
     }
   }
 
   render(){
     return (
       <View style={styles.container}>
-        <View style={styles.ellipseStack}>
-          <Svg viewBox="0 0 170.74 170.74" style={styles.ellipse}>
-            <Ellipse
-              strokeWidth={1}
-              fill="rgba(230, 230, 230,1)"
-              stroke="rgba(230, 230, 230,1)"
-              cx={85}
-              cy={85}
-              rx={85}
-              ry={85}
-            ></Ellipse>
-          </Svg>
-          <Svg viewBox="0 0 141.59 141.59" style={styles.ellipse1}>
-            <Ellipse
-              strokeWidth={1}
-              fill="rgba(78,0,148,1)"
-              stroke="rgba(230, 230, 230,1)"
-              cx={71}
-              cy={71}
-              rx={70}
-              ry={70}
-            ></Ellipse>
-          </Svg>
-          <Text style={styles.desafioTech}>DesafioTech</Text>
-        </View>
-        <View style={styles.ellipse2Stack}>
-          <Svg viewBox="0 0 55.55 55.55" style={styles.ellipse2}>
-            <Ellipse
-              strokeWidth={1}
-              fill="rgba(230, 230, 230,1)"
-              stroke="rgba(230, 230, 230,1)"
-              cx={28}
-              cy={28}
-              rx={27}
-              ry={27}
-            ></Ellipse>
-          </Svg>
-          <Svg viewBox="0 0 45.51 45.51" style={styles.ellipse3}>
-            <Ellipse
-              strokeWidth={1}
-              fill="#502a95"
-              stroke="rgba(230, 230, 230,1)"
-              cx={23}
-              cy={23}
-              rx={22}
-              ry={22}
-            ></Ellipse>
-          </Svg>
-          <Text style={styles.loremIpsum}>?</Text>
-        </View>
-        <TextInput value={this.state.matricula} style={styles.input}
+      <View style={styles.ellipseStack}>
+        <Svg viewBox="0 0 170.74 170.74" style={styles.ellipse}>
+          <Ellipse
+            strokeWidth={1}
+            fill="rgba(230, 230, 230,1)"
+            stroke="rgba(230, 230, 230,1)"
+            cx={85}
+            cy={85}
+            rx={85}
+            ry={85}
+          ></Ellipse>
+        </Svg>
+        <Svg viewBox="0 0 141.59 141.59" style={styles.ellipse1}>
+          <Ellipse
+            strokeWidth={1}
+            fill="rgba(78,0,148,1)"
+            stroke="rgba(230, 230, 230,1)"
+            cx={71}
+            cy={71}
+            rx={70}
+            ry={70}
+          ></Ellipse>
+        </Svg>
+        <Text style={styles.desafioTech}>DesafioTech</Text>
+      </View>
+      <View style={styles.ellipse2Stack}>
+        <Svg viewBox="0 0 55.55 55.55" style={styles.ellipse2}>
+          <Ellipse
+            strokeWidth={1}
+            fill="rgba(230, 230, 230,1)"
+            stroke="rgba(230, 230, 230,1)"
+            cx={28}
+            cy={28}
+            rx={27}
+            ry={27}
+          ></Ellipse>
+        </Svg>
+        <Svg viewBox="0 0 45.51 45.51" style={styles.ellipse3}>
+          <Ellipse
+            strokeWidth={1}
+            fill="#502a95"
+            stroke="rgba(230, 230, 230,1)"
+            cx={23}
+            cy={23}
+            rx={22}
+            ry={22}
+          ></Ellipse>
+        </Svg>
+        <Text style={styles.loremIpsum}>?</Text>
+      </View>
+      <TextInput value={this.state.matricula} style={styles.input}
         onChangeText={(matricula)=> this.setState({matricula: matricula})}
         placeholder=" Número da Matrícula" />
-        <TextInput value={this.state.senha} style={styles.input}
-        onChangeText={(senha)=> this.setState({senha: senha})}
-        placeholder="Senha" placeholderTextColor="#FFF" />
+      <TextInput style={styles.input} placeholder=" Nome Completo" />
         <View style={styles.button}>
           <TouchableOpacity style={styles.textButton} onPress={this.entrar}>
             <Text style={styles.textButton}>

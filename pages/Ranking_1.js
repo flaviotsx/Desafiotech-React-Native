@@ -1,253 +1,111 @@
 import React, { Component } from "react";
-import {Text, View, TouchableOpacity, TextInput, StyleSheet, Keyboard} from 'react-native';
+import {Text, View, TouchableOpacity, TextInput, StyleSheet, Keyboard, FlatList} from 'react-native';
 
 export default class  Ranking_1 extends Component{
 
     constructor(props){
         super(props);
-        
+            this.state = {
+                obj : [
+                    { key: "Devin", ranking: 4.9 },
+                    { key: "Dan", ranking: 4.8 },
+                    { key: "Dominic", ranking: 4.5 },
+                    { key: "Jackson", ranking: 4.4 },
+                    { key: "James", ranking: 4.1 },
+                    { key: "Joel", ranking: 3.7 }
+                  ]
+            }
         }
   render() {
         return (
-        <View style={styles.container}>
-        <Text style={styles.ranking}>Ranking</Text>
-        <View style={styles.group1}>
-            <View style={styles.rect}>
-            <View style={styles.devinRow}>
-                <Text style={styles.devin}>Devin</Text>
-                <Text style={styles.devin2}>4.9</Text>
+            <View style={styles.container}>
+            <View style={styles.box1}>
+            <Text style={styles.title}>Ranking</Text>
             </View>
-            </View>
-        </View>
-        <View style={styles.group7}>
-            <View style={styles.rect}>
-            <View style={styles.danRow}>
-                <Text style={styles.dan}>Dan</Text>
-                <Text style={styles.devin8}>4.8</Text>
-            </View>
-            </View>
-        </View>
-        <View style={styles.group3}>
-            <View style={styles.rect}>
-            <View style={styles.dominicRow}>
-                <Text style={styles.dominic}>Dominic</Text>
-                <Text style={styles.devin4}>4.5</Text>
-            </View>
-            </View>
-        </View>
-        <View style={styles.group4}>
-            <View style={styles.rect}>
-            <View style={styles.jacksonRow}>
-                <Text style={styles.jackson}>Jackson</Text>
-                <Text style={styles.devin5}>4.4</Text>
-            </View>
-            </View>
-        </View>
-        <View style={styles.group5}>
-            <View style={styles.rect}>
-            <View style={styles.jamesRow}>
-                <Text style={styles.james}>James</Text>
-                <Text style={styles.devin6}>4.1</Text>
-            </View>
-            </View>
-        </View>
-        <View style={styles.group6}>
-            <View style={styles.rect}>
-            <View style={styles.joelRow}>
-                <Text style={styles.joel}>Joel</Text>
-                <Text style={styles.devin7}>3.7</Text>
-            </View>
-            </View>
-        </View>
 
-        <View style={styles.button}>
-            <TouchableOpacity style={styles.textButton} onPress={() => { this.props.navigation.navigate({routeName: 'Nivel1'}) }}>
-                <Text style={styles.textButton}>
-                Praticar
-                </Text>
-            </TouchableOpacity>
+            <View style={styles.box2}>
+            <FlatList
+                data={this.state.obj}
+                contentContainerStyle={styles.flatbox}
+                renderItem={({ item }) => (
+                <View style={styles.box3}>
+                    <Text style={styles.item}>{item.key}</Text>
+                    <Text style={styles.item2}>{item.ranking}</Text>
+                </View>
+                )}
+            />
             </View>
-        </View>
-    );
+
+            <View style={styles.button}>
+                <TouchableOpacity style={styles.textButton} onPress={() => { this.props.navigation.navigate({routeName: 'Nivel1'}) }}>
+                    <Text style={styles.textButton}>Desafio</Text>
+                </TouchableOpacity>
+            </View>
+            
+        </View>   
+        );
     }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  ranking: {
-    color: "rgba(53,53,53,1)",
-    fontSize: 28,
-    marginTop: 91,
-    alignSelf: "center"
-  },
-  group1: {
-    width: 244,
-    height: 50,
-    marginTop: 35,
-    marginLeft: 66
-  },
-  button: {
-    backgroundColor: "#429",
-    borderRadius: 4,
-    height: 40,
-    alignSelf: "stretch",
-    marginHorizontal: 50,
-    marginTop: 20
-  },
-  textButton: {
-    color: "rgba(248,231,28,1)",
-    fontSize: 26,
-    textAlign: "center"
-  },
-  rect: {
-    width: 244,
-    height: 50,
-    backgroundColor: "rgba(230, 230, 230,1)",
-    borderRadius: 4,
-    borderColor: "#502a95",
-    borderWidth: 2,
-    flexDirection: "row"
-  },
-  devin: {
-    color: "#f8e84d",
-    fontSize: 18
-  },
-  devin2: {
-    color: "#f8e84d",
-    fontSize: 18,
-    marginLeft: 137,
-    marginTop: 1
-  },
-  devinRow: {
-    height: 19,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 20,
-    marginLeft: 18,
-    marginTop: 15
-  },
-  group7: {
-    width: 244,
-    height: 50,
-    marginTop: 9,
-    alignSelf: "center"
-  },
-  dan: {
-    color: "#2b2b2b",
-    fontSize: 18
-  },
-  devin8: {
-    color: "rgba(43,43,43,1)",
-    fontSize: 18,
-    marginLeft: 149,
-    marginTop: 1
-  },
-  danRow: {
-    height: 19,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 20,
-    marginLeft: 18,
-    marginTop: 15
-  },
-  group3: {
-    width: 244,
-    height: 50,
-    marginTop: 11,
-    alignSelf: "center"
-  },
-  dominic: {
-    color: "#2b2b2b",
-    fontSize: 18
-  },
-  devin4: {
-    color: "#2b2b2b",
-    fontSize: 18,
-    marginLeft: 115,
-    marginTop: 1
-  },
-  dominicRow: {
-    height: 19,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 20,
-    marginLeft: 18,
-    marginTop: 15
-  },
-  group4: {
-    width: 244,
-    height: 50,
-    marginTop: 8,
-    alignSelf: "center"
-  },
-  jackson: {
-    color: "rgba(43,43,43,1)",
-    fontSize: 18
-  },
-  devin5: {
-    color: "rgba(43,43,43,1)",
-    fontSize: 18,
-    
-    marginLeft: 113,
-    marginTop: 1
-  },
-  jacksonRow: {
-    height: 19,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 20,
-    marginLeft: 18,
-    marginTop: 15
-  },
-  group5: {
-    width: 244,
-    height: 50,
-    marginTop: 9,
-    marginLeft: 66
-  },
-  james: {
-    color: "rgba(43,43,43,1)",
-    fontSize: 18
-  },
-  devin6: {
-    color: "rgba(43,43,43,1)",
-    fontSize: 18,
-    marginLeft: 127,
-    marginTop: 1
-  },
-  jamesRow: {
-    height: 19,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 20,
-    marginLeft: 18,
-    marginTop: 15
-  },
-  group6: {
-    width: 244,
-    height: 50,
-    marginTop: 10,
-    alignSelf: "center"
-  },
-  joel: {
-    color: "rgba(43,43,43,1)",
-    fontSize: 18
-  },
-  devin7: {
-    color: "rgba(208,2,27,1)",
-    fontSize: 18,
-    marginLeft: 147,
-    marginTop: 1
-  },
-  joelRow: {
-    height: 19,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 20,
-    marginLeft: 18,
-    marginTop: 15
-  }
-});
-
+    container: {
+      flex: 1,
+      justifyContent: "space-around"
+    },
+    box1: {
+      width: "100%",
+      height: 50,
+      marginTop: 50,
+      alignItems: "center",
+      justifyContent: "center"
+    },
+    box2: {
+      width: "100%",
+      height: 400,
+      justifyContent: "center"
+    },
+    box3: {
+      width: 250,
+      height: 50,
+      backgroundColor: "#eee",
+      borderColor: "purple",
+      borderWidth: 3,
+      borderRadius: 4,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginTop: 15
+    },
+    flatbox: {
+      height: 350,
+      width: "100%",
+      alignItems: "center"
+    },
+    title: {
+      fontSize: 20
+    },
+    item: {
+      padding: 10,
+      fontSize: 18,
+      height: 44
+    },
+    item2: {
+      padding: 10,
+      fontSize: 18,
+      height: 44
+    },
+    button: {
+      backgroundColor: "#429",
+      borderRadius: 4,
+      height: 40,
+      justifyContent: "center",
+      marginHorizontal: 50,
+      marginTop: 20,
+      marginBottom: 50
+    },
+    textButton: {
+      color: "rgba(248,231,28,1)",
+      fontSize: 26,
+      textAlign: "center"
+    }
+  });
+  
