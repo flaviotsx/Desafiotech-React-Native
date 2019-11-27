@@ -23,7 +23,7 @@ export default function HomePage() {
       </View>
     </View>
   );
-}
+} 
 
 const styles = StyleSheet.create({
   container: {
