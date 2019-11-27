@@ -1,7 +1,7 @@
 import React from "react";
 //import LoginPage from "./pages/LoginPage";
-import PraticaPage from "./pages/PraticaPage";
+import RankingPage from "./pages/RankingPage";
 
 export default function App() {
-  return <PraticaPage />;
+  return <RankingPage />;
 } 
